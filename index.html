@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio - Sadith Melo Cabanillas</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Menú -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="img/logo.png" alt="Logo" class="logo-img">
+        <span class="instituto">IESTP "Andrés Avelino Cáceres Dorregaray"</span>
+      </div>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion('perfil')">Perfil</a></li>
+        <li><a href="#" onclick="mostrarSeccion('portafolio')">Portafolio</a></li>
+        <li><a href="#" onclick="mostrarSeccion('admin')">Administrador</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Perfil -->
+  <section id="perfil" class="seccion activa">
+    <div class="perfil-box">
+      <div class="foto-wrapper">
+        <img src="img/img2.png" alt="Sadith Melo Cabanillas" class="foto-perfil">
+      </div>
+      <h2>SADITH MELO CABANILLAS</h2>
+      <p class="destacado">✨ Estudiante de diseño y programación ✨</p>
+      <p>Apasionada por la innovación, creatividad y la tecnología aplicada al desarrollo de soluciones.</p>
+      <div class="habilidades">
+        <h3>Habilidades</h3>
+        <div class="habilidades-grid">
+          <div class="habilidad">Diseño Web</div>
+          <div class="habilidad">Programación</div>
+          <div class="habilidad">Marketing Digital</div>
+          <div class="habilidad">Gestión de Contenidos</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portafolio -->
+  <section id="portafolio" class="seccion">
+    <h2 class="titulo-seccion">MIS CURSOS</h2>
+
+    <div class="portafolio-grid">
+      <!-- Curso 1 -->
+      <div class="curso-card">
+        <div class="curso-icon">📊</div>
+        <h3>Proyecto de Aplicación Profesional</h3>
+        <div class="actividad">
+          <h4>Semana 1</h4>
+          <div class="acciones">
+            <a href="Fundamentos de un Proyecto Web.pdf" target="_blank" class="btn-accion">📖 Ver</a>
+            <a href="Fundamentos de un Proyecto Web.pdf" download class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+        <div class="actividad">
+          <h4>Semana 2</h4>
+          <div class="acciones">
+            <a href="TEMA02 Actores y Organización del Proyecto Web.pdf" target="_blank" class="btn-accion">📖 Ver</a>
+            <a href="TEMA02 Actores y Organización del Proyecto Web.pdf" download class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+        <div class="actividad">
+          <h4>Semana 3</h4>
+          <div class="acciones">
+            <a href="Sistema_Evaluacion_Proyectos_Investigacion_ Version_02 (1).pdf" target="_blank" class="btn-accion">📖 Ver</a>
+            <a href="Sistema_Evaluacion_Proyectos_Investigacion_ Version_02 (1).pdf" download class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 2 -->
+      <div class="curso-card">
+        <div class="curso-icon">📱</div>
+        <h3>Marketing Digital</h3>
+        <div class="actividad">
+          <h4>Semana 1</h4>
+          <div class="acciones">
+            <a href="#" class="btn-accion">📖 Ver</a>
+            <a href="#" class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+        <div class="actividad">
+          <h4>Semana 2</h4>
+          <div class="acciones">
+            <a href="#" class="btn-accion">📖 Ver</a>
+            <a href="#" class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curso 3 -->
+      <div class="curso-card">
+        <div class="curso-icon">📝</div>
+        <h3>Gestión de Contenidos</h3>
+        <div class="actividad">
+          <h4>Semana 1</h4>
+          <div class="acciones">
+            <a href="#" class="btn-accion">📖 Ver</a>
+            <a href="#" class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+        <div class="actividad">
+          <h4>Semana 2</h4>
+          <div class="acciones">
+            <a href="#" class="btn-accion">📖 Ver</a>
+            <a href="#" class="btn-accion">⬇️ Descargar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Administrador -->
+  <section id="admin" class="seccion">
+    <div class="login-container">
+      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="Usuario" class="usuario-img">
+      <h2>Acceso Administrador</h2>
+      <form onsubmit="return login(event)">
+        <input type="text" id="username" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Ingresar</button>
+      </form>
+      <p id="login-msg"></p>
+    </div>
+  </section>
+
+  <!-- Panel administrador -->
+  <section id="admin-panel" class="seccion">
+    <h2 class="titulo-seccion">📌 Panel de Administración</h2>
+    <p class="subtitulo">Desde aquí puedes subir o eliminar tus trabajos.</p>
+    <div id="gestionar-contenido" class="panel-box"></div>
+    <button onclick="cerrarSesion()" class="btn-salir">Cerrar Sesión</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
